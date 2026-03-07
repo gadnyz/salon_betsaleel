@@ -1,4 +1,4 @@
-import Footer from "@/components/Footer";
+﻿import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
@@ -15,7 +15,7 @@ export const viewport = {
 
 export const metadata = {
   title: "Salon Betsaleel",
-  description: "Premiere edition 2026 du salon entrepreneurial Talents & Talents organise par les jeunes de l'eglise PPUNILU.",
+  description: "Première édition 2026 du salon entrepreneurial Talents & Talents organisé par les jeunes de l'église PPUNILU.",
 };
 
 export default function RootLayout({

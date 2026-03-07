@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+﻿import { Badge } from "@/components/ui/badge";
 import FAQAccordion from "@/components/homepage/faq-section";
 
 export default function FAQSection() {
@@ -7,7 +7,7 @@ export default function FAQSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center gap-4 text-center md:gap-8">
           <Badge variant="outline" className="mb-2">FAQ</Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Questions frequentes</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Questions fréquentes</h2>
           <p className="max-w-[700px] text-muted-foreground text-lg">Tout ce qu'il faut savoir pour participer au Salon Betsaleel.</p>
         </div>
         <div className="mt-16">

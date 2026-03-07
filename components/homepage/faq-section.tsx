@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
@@ -36,27 +36,27 @@ export default function FAQSection() {
   const faqs = [
     {
       question: "Qu'est-ce que Talents & Talents?",
-      answer: "Talents & Talents est le concept du salon entrepreneurial Betsaleel: une activite qui met en valeur les talents et initiatives entrepreneuriales des chretiens.",
+      answer: "Talents & Talents est le concept du salon entrepreneurial Betsaleel: une activité qui met en valeur les talents et initiatives entrepreneuriales des chrétiens.",
     },
     {
-      question: "Qui organise l'evenement?",
-      answer: "L'evenement est organise par les jeunes de l'eglise PPUNILU.",
+      question: "Qui organise l'événement?",
+      answer: "L'événement est organisé par les jeunes de l'église PPUNILU.",
     },
     {
       question: "Qui peut participer?",
-      answer: "Les jeunes de l'eglise et tout jeune chretien porteur d'un projet, a condition d'etre rattache a une eglise.",
+      answer: "Les jeunes de l'église et tout jeune chrétien porteur d'un projet, à condition d'être rattaché à une église.",
     },
     {
       question: "Quels types de projets peuvent participer?",
-      answer: "Tous les types de projets deja commences peuvent participer. Il ne s'agit pas d'une simple idee, mais d'un projet deja engage.",
+      answer: "Tous les types de projets déjà commencés peuvent participer. Il ne s'agit pas d'une simple idée, mais d'un projet déjà engagé.",
     },
     {
-      question: "Les laureats recoivent-ils un prix?",
-      answer: "Oui, des prix seront attribues aux gagnants du concours.",
+      question: "Les lauréats reçoivent-ils un prix?",
+      answer: "Oui, des prix seront attribués aux gagnants du concours.",
     },
     {
       question: "Peut-on devenir partenaire?",
-      answer: "Oui. Les partenaires peuvent apporter un appui, un accompagnement et un soutien concret a l'initiative.",
+      answer: "Oui. Les partenaires peuvent apporter un appui, un accompagnement et un soutien concret à l'initiative.",
     },
   ];
 

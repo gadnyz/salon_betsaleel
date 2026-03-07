@@ -1,25 +1,25 @@
-import { Badge } from "@/components/ui/badge";
+﻿import { Badge } from "@/components/ui/badge";
 import { Users, Lightbulb, Rocket, Church } from "lucide-react";
 
 const features = [
   {
     title: "Formation",
-    description: "Sessions pratiques pour developper les competences et la posture entrepreneuriale.",
+    description: "Sessions pratiques pour développer les compétences et la posture entrepreneuriale.",
     icon: <Users className="h-6 w-6" />,
   },
   {
     title: "Innovation",
-    description: "Mise en valeur des initiatives creatives qui repondent a des besoins reels.",
+    description: "Mise en valeur des initiatives créatives qui répondent à des besoins réels.",
     icon: <Lightbulb className="h-6 w-6" />,
   },
   {
-    title: "Reseautage",
+    title: "Réseautage",
     description: "Rencontres utiles entre porteurs de projets, mentors, partenaires et visiteurs.",
     icon: <Rocket className="h-6 w-6" />,
   },
   {
     title: "Vision et foi",
-    description: "Developper l'entrepreneuriat avec des valeurs chretiennes de service, d'ethique et d'impact.",
+    description: "Développer l'entrepreneuriat avec des valeurs chrétiennes de service, d'éthique et d'impact.",
     icon: <Church className="h-6 w-6" />,
   },
 ];
@@ -30,7 +30,7 @@ export default function FeaturesSection() {
       <div className="container px-4 md:px-6">
         <div className="mb-12 text-center">
           <Badge variant="outline" className="mb-4">Objectif du salon</Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Mettre en valeur les talents et initiatives entrepreneuriales des chretiens</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Mettre en valeur les talents et initiatives entrepreneuriales des chrétiens</h2>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (

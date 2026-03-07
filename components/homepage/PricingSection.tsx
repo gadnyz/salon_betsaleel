@@ -20,17 +20,17 @@ const prizes = ["1er prix", "2e prix", "3e prix"];
 
 export default function PricingSection() {
   return (
-    <section id="concours" className="border-t bg-muted/30 py-20 md:py-32">
+    <section id="concours" className="border-t bg-muted/30 py-16 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center gap-4 text-center md:gap-8">
           <Badge variant="outline" className="mb-2">Concours de projets</Badge>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Regles, selection et recompenses</h2>
           <p className="max-w-[780px] text-lg text-muted-foreground">
-            Les inscriptions sont ouvertes jusqu'au 25 mars 2026. Apres analyse, 5 projets seront selectionnes et les candidats retenus seront contactes par l'equipe.
+            Les inscriptions au concours sont temporairement fermeees. Elles seront reouvertes apres correction des erreurs techniques.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-5xl gap-6 lg:grid-cols-2">
+        <div className="mx-auto mt-16 grid max-w-5xl gap-6 lg:grid-cols-2" id="inscription-concours">
           <div className="rounded-2xl border bg-background p-6">
             <h3 className="text-xl font-semibold">Important a savoir</h3>
             <p className="mt-3 text-muted-foreground">
@@ -67,6 +67,10 @@ export default function PricingSection() {
                 </span>
               ))}
             </div>
+
+            <p className="mt-6 rounded-md border bg-muted/40 px-4 py-3 text-sm text-muted-foreground">
+              Inscriptions concours bientot disponibles.
+            </p>
           </div>
         </div>
       </div>

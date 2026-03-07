@@ -1,5 +1,5 @@
-export default function CompanyLogos() {
-  const names = ["Jeunesse de l'Eglise", "Mentors", "Entrepreneurs", "Partenaires", "Exposants"];
+﻿export default function CompanyLogos() {
+  const names = ["Jeunesse de l'Église", "Mentors", "Entrepreneurs", "Partenaires", "Exposants"];
 
   return (
     <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">

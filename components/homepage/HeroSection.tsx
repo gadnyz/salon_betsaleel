@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import RegistrationCounters from "@/components/homepage/RegistrationCounters";
 
 export default function HeroSection() {
   return (
@@ -12,26 +13,25 @@ export default function HeroSection() {
           <h1 className="mb-6 text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
             Salon Betsaleel: activite entrepreneuriale pour <span className="text-primary">valoriser les talents chretiens</span>
           </h1>
-          <p className="mx-auto max-w-[800px] text-lg text-muted-foreground md:text-xl">
-            Une initiative organisee par les jeunes de l'eglise PPUNILU, ouverte a toute personne chretienne porteuse d'un projet d'entreprise deja engage.
-          </p>
-          <p className="mx-auto mt-5 max-w-[820px] text-base text-muted-foreground md:text-lg">
-            "La reussite de l'un de nous est notre reussite a tous" - Exode 35:30-35: "Il les a remplis d'intelligence pour executer toutes sortes de travaux et d'inventions."
-          </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="#inscription-exposant" className="w-full sm:w-auto">
-              <Button size="lg" className="group">
+            <Link href="/inscription-exposant" className="w-full sm:w-auto">
+              <Button size="lg" className="group w-full sm:w-auto">
                 S'inscrire pour exposer
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
+            <Button size="lg" variant="outline" className="w-full sm:w-auto" disabled>
+              Inscriptions concours bientot disponibles
+            </Button>
           </div>
+
+          <RegistrationCounters />
         </div>
 
         <div className="mt-12 grid gap-4 md:grid-cols-3">
-          <img className="h-64 w-full rounded-xl object-cover" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1000&q=80" alt="Jeunes organisateurs" />
-          <img className="h-64 w-full rounded-xl object-cover" src="https://images.unsplash.com/photo-1559223607-a43c990c692c?auto=format&fit=crop&w=1000&q=80" alt="Panel entrepreneurial" />
-          <img className="h-64 w-full rounded-xl object-cover" src="https://images.unsplash.com/photo-1540317580384-e5d43867caa6?auto=format&fit=crop&w=1000&q=80" alt="Presentation de projet" />
+          <img className="h-64 w-full rounded-xl object-cover" src="/homepage/excursion%202026_63.jpg" alt="Jeunes organisateurs" />
+          <img className="h-64 w-full rounded-xl object-cover" src="/homepage/excursion%202026_71.jpg" alt="Panel entrepreneurial" />
+          <img className="h-64 w-full rounded-xl object-cover" src="/homepage/excursion%202026_72.jpg" alt="Presentation de projet" />
         </div>
       </div>
     </section>
