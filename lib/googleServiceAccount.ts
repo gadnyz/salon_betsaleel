@@ -18,7 +18,7 @@ function base64Url(input: string | Buffer): string {
 
 async function readServiceAccount(): Promise<ServiceAccount> {
   const configuredPath = process.env.GOOGLE_SERVICE_ACCOUNT_FILE?.trim();
-  const filePath = configuredPath || "salon-bestsaleel-c43f77aa08ee.json";
+  const filePath = configuredPath || "salon-bestsaleel-cdcc9bd5551f.json";
   const absolutePath = path.resolve(process.cwd(), filePath);
 
   const raw = await readFile(absolutePath, "utf8");
