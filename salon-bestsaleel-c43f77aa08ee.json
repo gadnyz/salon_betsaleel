@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "salon-bestsaleel",
+  "private_key_id": "c43f77aa08eeef9db6913bd7938f3a6d8efc1eae",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDkTtomiuT0+f6k\nnqJGytCp15+ZrVkbbj8R50xR6q+wTn6XCbLqR7J+PlJwcNEr2hK8KMjf9gF6x0CI\nRtmovs5mHwFcOUArhltwo7/NysazSA9bmc8/uzpwOgG4QWSHA/nZYvw9yOz2HyGv\nBOE03as5f0KFHxFNyDDlJD0iUwxHfMBkAXjmynLqwVVxGsIJFlkIvaZiGmY8Gjag\nIXeiYnSctLJPw+CYH+bE89uzp0q8eQZ92OczAt/upVYgI3oMKZZtpF9bGCS1b503\nxWQrSoboyPP09+qb2a6MgwVR+jZzCVkLUgNDRXMxs+8n/k4Y3eoKroFELtSRrtjX\neVh6dJQ5AgMBAAECggEAEOptu+bVHXiLXzeYtu2OhdMB0oFXRZLGzgUI8NXWZBYA\nx6CSlsyuoy9rbMTTHrBm7HWKIpvn0qjCNYaoWFog0UyxTVu5jzAChOdBDhac38oy\nRxtvkV2GMCwAFh6UO/O1tp9gqJRDSF4YoQ7Xv9K/vcAZ1eKuJcj0JHoppGoqUf5+\nsHzguwjEgLV95CB1NEF3wlNw6bXZpo8J8ot0IVpf61pVuAEeDlWRHE5t59Fsq1nu\nazz0bQWsB48PLdofdLU7UoDOIq8SukLtKNH+jJBM/OfWAbgbIRCqNuTgmkHcdSCt\nhOJjYFVbOnpDPSY0SHvoP9TkA44mz28HERDoT7+B3QKBgQDyTvt+JfgtB8wSN9Rw\n32a8fdi2UIZggF1Lsh6R0+z4s7Fazo1lXkj9o932QZwfvq0nA3cdozw/srMCrGvj\nBcbSNO7nqlxSqxbQ2NLN9Oao1xqQkS1WsrDlnxY+fDZOHR1okxNUHN8cq0hYgrMN\nt9Gqt9DaWSbnl7Gd3g6L8xiUJQKBgQDxNVnY27WNIIX2mcZ235qZ9Pi4zx9pLuJB\ny93TWeR8pkSerGMDpOINBpdUDeVXXjEBA0q5+HmBa3TqolicKTYY1ur42B5SNsGV\n4kfbUD6XSx3pNLtc0k1spj8o99MvcZRw69BuSp64R1BOnskxPP1k41PBVYuGPsJT\n62hu1dgZhQKBgC4Qe9koiLyuzcns2TM4FUTiO8+1EUbJQHNCgnNAsb06FA5qVBEg\nUon9nBXTtUWHr01KaFu3C54kb8mjU8NN9tVBgOWDypdgtS6w+apz02HnusIfB1qD\nEAQnMUhhvsUs3clipHsKHhRKL6+78SQ7fN2Sol7QMgg3G2oiq+tJJLQNAoGBAN2v\n5ADMhYLMlnL8CAyvG/9Nx97K9hqM7YP9Y8XhA3+QrNaMp3/s5ZmFKkYlc1gmCLHe\nnapodPv+j/kp9nin48FWnaTRtKRpEOi5jMNDcBNLBZWVUnJQErq93KTBiMY9BGn4\nQZtsV44UdPmdNFpdrKIx0IOLJO3f9mh8noHnZnKlAoGBAMvOVoCCO1/Hgm3XyOQB\nN0qd5grHfpDger4MsqxtcuVeix2sKf/Hth5hU67tUgkDk37Z6NcB0fmhk811I7JF\n12XHEarffxED3LUk5mITW22LXUXixjWNEBpRlEbGIapTgqwRzKmBTErLPNMA4GHM\nZWatJ21agFLX/f/g45Xjr944\n-----END PRIVATE KEY-----\n",
+  "client_email": "batsaleel@salon-bestsaleel.iam.gserviceaccount.com",
+  "client_id": "107647761959696072091",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/batsaleel%40salon-bestsaleel.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
