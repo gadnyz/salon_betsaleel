@@ -1,6 +1,4 @@
-import { createSign } from "node:crypto";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+﻿import { createSign } from "node:crypto";
 
 type ServiceAccount = {
   client_email: string;
@@ -16,23 +14,44 @@ function base64Url(input: string | Buffer): string {
   return base64.replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
 }
 
-async function readServiceAccount(): Promise<ServiceAccount> {
-  const configuredPath = process.env.GOOGLE_SERVICE_ACCOUNT_FILE?.trim();
-  const filePath = configuredPath || "salon-bestsaleel-cdcc9bd5551f.json";
-  const absolutePath = path.resolve(process.cwd(), filePath);
+function env(name: string): string | undefined {
+  const value = process.env[name];
+  return value && value.trim().length > 0 ? value : undefined;
+}
 
-  const raw = await readFile(absolutePath, "utf8");
-  const parsed = JSON.parse(raw) as ServiceAccount;
+function readServiceAccountFromEnv(): ServiceAccount {
+  const clientEmail =
+    env("GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL") ||
+    env("CLIENT_EMAIL") ||
+    env("GOOGLE_CLIENT_EMAIL");
 
-  if (!parsed.client_email || !parsed.private_key || !parsed.token_uri) {
-    throw new Error("Invalid service account file.");
+  const privateKeyRaw =
+    env("GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY") ||
+    env("PRIVATE_KEY") ||
+    env("GOOGLE_PRIVATE_KEY");
+
+  const tokenUri =
+    env("GOOGLE_SERVICE_ACCOUNT_TOKEN_URI") ||
+    env("TOKEN_URI") ||
+    "https://oauth2.googleapis.com/token";
+
+  if (!clientEmail || !privateKeyRaw) {
+    throw new Error(
+      "Service account env vars missing. Set CLIENT_EMAIL and PRIVATE_KEY (or GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL and GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY).",
+    );
   }
 
-  return parsed;
+  const privateKey = privateKeyRaw.replace(/\\n/g, "\n");
+
+  return {
+    client_email: clientEmail,
+    private_key: privateKey,
+    token_uri: tokenUri,
+  };
 }
 
 export async function getGoogleAccessToken(scopes: string[]): Promise<string> {
-  const serviceAccount = await readServiceAccount();
+  const serviceAccount = readServiceAccountFromEnv();
   const now = Math.floor(Date.now() / 1000);
 
   const header = { alg: "RS256", typ: "JWT" };
