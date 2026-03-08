@@ -6,6 +6,11 @@ type ServiceAccount = {
   token_uri: string;
 };
 
+type ServiceAccountEnvStatus = {
+  isValid: boolean;
+  missing: string[];
+};
+
 function base64Url(input: string | Buffer): string {
   const base64 = Buffer.isBuffer(input)
     ? input.toString("base64")
@@ -17,6 +22,37 @@ function base64Url(input: string | Buffer): string {
 function env(name: string): string | undefined {
   const value = process.env[name];
   return value && value.trim().length > 0 ? value : undefined;
+}
+
+export function getGoogleServiceAccountEnvStatus(): ServiceAccountEnvStatus {
+  const clientEmail =
+    env("GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL") ||
+    env("CLIENT_EMAIL") ||
+    env("GOOGLE_CLIENT_EMAIL");
+
+  const privateKeyRaw =
+    env("GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY") ||
+    env("PRIVATE_KEY") ||
+    env("GOOGLE_PRIVATE_KEY");
+
+  const missing: string[] = [];
+
+  if (!clientEmail) {
+    missing.push(
+      "GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL (or CLIENT_EMAIL / GOOGLE_CLIENT_EMAIL)",
+    );
+  }
+
+  if (!privateKeyRaw) {
+    missing.push(
+      "GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY (or PRIVATE_KEY / GOOGLE_PRIVATE_KEY)",
+    );
+  }
+
+  return {
+    isValid: missing.length === 0,
+    missing,
+  };
 }
 
 function readServiceAccountFromEnv(): ServiceAccount {
@@ -35,10 +71,9 @@ function readServiceAccountFromEnv(): ServiceAccount {
     env("TOKEN_URI") ||
     "https://oauth2.googleapis.com/token";
 
-  if (!clientEmail || !privateKeyRaw) {
-    throw new Error(
-      "Service account env vars missing. Set CLIENT_EMAIL and PRIVATE_KEY (or GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL and GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY).",
-    );
+  const status = getGoogleServiceAccountEnvStatus();
+  if (!status.isValid || !clientEmail || !privateKeyRaw) {
+    throw new Error(`Service account env vars missing: ${status.missing.join(", ")}.`);
   }
 
   const privateKey = privateKeyRaw.replace(/\\n/g, "\n");
@@ -52,6 +87,8 @@ function readServiceAccountFromEnv(): ServiceAccount {
 
 export async function getGoogleAccessToken(scopes: string[]): Promise<string> {
   const serviceAccount = readServiceAccountFromEnv();
+  console.log("Environnement variables", serviceAccount);
+
   const now = Math.floor(Date.now() / 1000);
 
   const header = { alg: "RS256", typ: "JWT" };

@@ -150,7 +150,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   const { spreadsheetId, exposantsSheet, concoursSheet } = getSheetConfig();
-  if (!spreadsheetId) return NextResponse.json({ error: "Google Sheet non configure." }, { status: 500 });
+  if (!spreadsheetId) return NextResponse.json({ error: "Base des données non accessible !! VEUILLEZ CONCTACTER L'ADMINISTRATEUR. Merci." }, { status: 500 });
 
   let body: { type?: RegistrationType; data?: RegistrationPayload };
   try {
@@ -172,9 +172,9 @@ export async function POST(request: Request) {
     const targetSheet = body.type === "exposant" ? exposantsSheet : concoursSheet;
     const duplicate = await phoneExistsInSheet(accessToken, spreadsheetId, targetSheet, data.whatsappPhone);
 
-    if (duplicate) {
-      return NextResponse.json({ error: "Ce numéro de téléphone existe deja pour ce formulaire." }, { status: 409 });
-    }
+    // if (duplicate) {
+    //   return NextResponse.json({ error: "Ce numéro de téléphone existe deja pour ce formulaire." }, { status: 409 });
+    // }
 
     await appendRow(accessToken, spreadsheetId, `${targetSheet}!A:P`, toRow(body.type, data, new Date().toISOString()));
     return NextResponse.json({ success: true });
