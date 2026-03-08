@@ -4,7 +4,6 @@ import { getGoogleAccessToken } from "@/lib/googleServiceAccount";
 type RegistrationType = "exposant" | "concours";
 
 type RegistrationPayload = {
-  email: string;
   fullName: string;
   whatsappPhone: string;
   gmailAddress: string;
@@ -45,7 +44,6 @@ const allowedDomains = new Set([
 const allowedNeedsTable = new Set(["Oui", "Non"]);
 
 const requiredCommonFields: Array<keyof RegistrationPayload> = [
-  "email",
   "fullName",
   "whatsappPhone",
   "gmailAddress",
@@ -54,7 +52,6 @@ const requiredCommonFields: Array<keyof RegistrationPayload> = [
   "activityName",
   "activityDomain",
   "activityDescription",
-  "exposedProductType",
   "needsTable",
 ];
 
@@ -118,7 +115,6 @@ function toRow(type: RegistrationType, data: RegistrationPayload, submittedAt: s
   return [
     submittedAt,
     type,
-    data.email,
     data.fullName,
     data.whatsappPhone,
     data.gmailAddress,
@@ -127,10 +123,9 @@ function toRow(type: RegistrationType, data: RegistrationPayload, submittedAt: s
     data.activityName,
     data.activityDomain,
     data.activityDescription,
-    data.exposedProductType,
     data.needsTable,
     data.logisticsDetails ?? "",
-    data.commitmentConfirmed ? "Engagement confirme" : "",
+    data.commitmentConfirmed ? "Engagement confirmé" : "",
     type === "concours" ? data.businessPlanPdfUrl ?? "" : "",
   ];
 }
@@ -178,7 +173,7 @@ export async function POST(request: Request) {
     const duplicate = await phoneExistsInSheet(accessToken, spreadsheetId, targetSheet, data.whatsappPhone);
 
     if (duplicate) {
-      return NextResponse.json({ error: "Ce numero de telephone existe deja pour ce formulaire." }, { status: 409 });
+      return NextResponse.json({ error: "Ce numéro de téléphone existe deja pour ce formulaire." }, { status: 409 });
     }
 
     await appendRow(accessToken, spreadsheetId, `${targetSheet}!A:P`, toRow(body.type, data, new Date().toISOString()));

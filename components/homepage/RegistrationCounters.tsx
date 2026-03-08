@@ -44,19 +44,20 @@ export default function RegistrationCounters() {
 
   return (
     <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-      <div className="rounded-xl border bg-background/80 p-4 text-left">
-        <p className="text-xs uppercase tracking-wide text-muted-foreground">Inscriptions exposants</p>
-        <p className="mt-1 text-2xl font-bold">{stats ? stats.exposants : "..."}</p>
+      <div className="rounded-xl border bg-background/80 p-4 text-center sm:col-span-2 max-w-sm mx-auto">
+        <p className="text-xs uppercase tracking-wide text-muted-foreground">
+          Inscriptions exposants
+        </p>
+        <p className="mt-1 text-2xl font-bold">
+          {stats ? stats.exposants : "..."}
+        </p>
       </div>
-      <div className="rounded-xl border bg-background/80 p-4 text-left">
-        <p className="text-xs uppercase tracking-wide text-muted-foreground">Inscriptions concours</p>
-        <p className="mt-1 text-2xl font-bold">{stats ? stats.concours : "..."}</p>
-      </div>
-      {stats && !stats.configured && (
-        <p className="sm:col-span-2 text-xs text-muted-foreground">
+
+      {/* {stats && !stats.configured && (
+        <p className="sm:col-span-2 text-xs text-muted-foreground text-center">
           Compteur en attente de configuration Google Sheets.
         </p>
-      )}
+      )} */}
     </div>
   );
 }

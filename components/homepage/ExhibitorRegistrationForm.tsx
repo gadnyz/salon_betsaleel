@@ -7,7 +7,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 type ExhibitorFormData = {
-  email: string;
   fullName: string;
   whatsappPhone: string;
   gmailAddress: string;
@@ -23,7 +22,6 @@ type ExhibitorFormData = {
 };
 
 const initialState: ExhibitorFormData = {
-  email: "",
   fullName: "",
   whatsappPhone: "",
   gmailAddress: "",
@@ -77,24 +75,19 @@ export default function ExhibitorRegistrationForm() {
 
   return (
     <form onSubmit={onSubmit} className="mt-6 space-y-4 text-left">
-      <div className="space-y-2">
-        <Label htmlFor="exhibitor-email">Email</Label>
-        <Input id="exhibitor-email" type="email" value={form.email} onChange={(e)=>setForm((p)=>({...p,email:e.target.value}))} required />
-      </div>
-
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor="exhibitor-fullName">Nom et prenom</Label>
           <Input id="exhibitor-fullName" value={form.fullName} onChange={(e)=>setForm((p)=>({...p,fullName:e.target.value}))} required />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="exhibitor-whatsapp">Numero telephone (WhatsApp)</Label>
+          <Label htmlFor="exhibitor-whatsapp">Numéro téléphone (WhatsApp)</Label>
           <Input id="exhibitor-whatsapp" value={form.whatsappPhone} onChange={(e)=>setForm((p)=>({...p,whatsappPhone:e.target.value}))} required />
         </div>
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="exhibitor-gmail">Adresse gmail</Label>
+        <Label htmlFor="exhibitor-gmail">Email</Label>
         <Input id="exhibitor-gmail" type="email" value={form.gmailAddress} onChange={(e)=>setForm((p)=>({...p,gmailAddress:e.target.value}))} required />
       </div>
 
@@ -112,43 +105,38 @@ export default function ExhibitorRegistrationForm() {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="exhibitor-activityName">Nome l'activite/entreprise</Label>
+        <Label htmlFor="exhibitor-activityName">Nom l'activité/entreprise</Label>
         <Input id="exhibitor-activityName" value={form.activityName} onChange={(e)=>setForm((p)=>({...p,activityName:e.target.value}))} required />
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="exhibitor-domain">Domaine d'activite</Label>
+        <Label htmlFor="exhibitor-domain">Domaine d'activité</Label>
         <select id="exhibitor-domain" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm" value={form.activityDomain} onChange={(e)=>setForm((p)=>({...p,activityDomain:e.target.value}))} required>
           <option value="">Selectionner un domaine</option>{domains.map((d)=><option key={d} value={d}>{d}</option>)}
         </select>
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="exhibitor-description">Description detaillee de votre activite (produits, services proposes)</Label>
+        <Label htmlFor="exhibitor-description">Description detaillée de votre activité (produits, services proposes)</Label>
         <Textarea id="exhibitor-description" value={form.activityDescription} onChange={(e)=>setForm((p)=>({...p,activityDescription:e.target.value}))} required />
-      </div>
-
-      <div className="space-y-2">
-        <Label htmlFor="exhibitor-productType">Quel type de produit que vous allez exposer ?</Label>
-        <Input id="exhibitor-productType" value={form.exposedProductType} onChange={(e)=>setForm((p)=>({...p,exposedProductType:e.target.value}))} required />
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor="exhibitor-needsTable">Avez-vous besoin d'une table ?</Label>
           <select id="exhibitor-needsTable" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm" value={form.needsTable} onChange={(e)=>setForm((p)=>({...p,needsTable:e.target.value as ExhibitorFormData["needsTable"]}))} required>
-            <option value="">Selectionner</option><option value="Oui">Oui</option><option value="Non">Non</option>
+            <option value="">Séléctionner</option><option value="Oui">Oui</option><option value="Non">Non</option>
           </select>
         </div>
         <div className="space-y-2">
-          <Label htmlFor="exhibitor-logistics">Avez-vous besoin d'une logistique specifique ? (Decrivez)</Label>
+          <Label htmlFor="exhibitor-logistics">Avez-vous besoin d'une logistique spécifique ? (Decrivez)</Label>
           <Input id="exhibitor-logistics" value={form.logisticsDetails} onChange={(e)=>setForm((p)=>({...p,logisticsDetails:e.target.value}))} />
         </div>
       </div>
 
       <label className="flex items-center gap-2 text-sm">
         <input type="checkbox" checked={form.commitmentConfirmed} onChange={(e)=>setForm((p)=>({...p,commitmentConfirmed:e.target.checked}))} required />
-        Je certifie l'exactitude des informations fournies et j'accepte le reglement du Salon Betsaleel.
+        Je certifie l'exactitude des informations fournies et j'accepte le règlement du Salon Betsaleel.
       </label>
 
       {message && <p className="text-sm text-green-600">{message}</p>}

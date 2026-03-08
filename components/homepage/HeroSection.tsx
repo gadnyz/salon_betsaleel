@@ -11,7 +11,7 @@ export default function HeroSection() {
         <div className="mx-auto mb-8 max-w-3xl text-center">
           <Badge className="mb-4" variant="outline">Premiere edition 2026</Badge>
           <h1 className="mb-6 text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-            Salon Betsaleel: activite entrepreneuriale pour <span className="text-primary">valoriser les talents chretiens</span>
+            Salon Betsaleel: activité entrepreneuriale pour <span className="text-primary">valoriser les talents chrétiens</span>
           </h1>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/inscription-exposant" className="w-full sm:w-auto">
@@ -20,9 +20,9 @@ export default function HeroSection() {
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto" disabled>
+            {/* <Button size="lg" variant="outline" className="w-full sm:w-auto" disabled>
               Inscriptions concours bientot disponibles
-            </Button>
+            </Button> */}
           </div>
 
           <RegistrationCounters />
