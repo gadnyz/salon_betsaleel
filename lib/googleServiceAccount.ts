@@ -87,7 +87,6 @@ function readServiceAccountFromEnv(): ServiceAccount {
 
 export async function getGoogleAccessToken(scopes: string[]): Promise<string> {
   const serviceAccount = readServiceAccountFromEnv();
-  console.log("Environnement variables", serviceAccount);
 
   const now = Math.floor(Date.now() / 1000);
 

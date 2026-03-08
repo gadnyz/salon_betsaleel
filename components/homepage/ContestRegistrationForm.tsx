@@ -187,7 +187,7 @@ export default function ContestRegistrationForm() {
       {error && <p className="text-sm text-red-600">{error}</p>}
 
       <Button type="submit" className="w-full sm:w-auto" disabled={submitting || uploadingPdf}>
-        {submitting ? "Envoi en cours..." : "Valider l'inscription concours"}
+        {submitting ? "Envoi en cours..." : "Soumettre"}
       </Button>
     </form>
   );

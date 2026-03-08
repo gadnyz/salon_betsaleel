@@ -61,11 +61,11 @@ export default function ExhibitorRegistrationForm() {
       });
       const payload = (await response.json().catch(() => ({}))) as { error?: string };
       if (!response.ok) {
-        setError(payload.error ?? "L'inscription exposant a echoue.");
+        setError(payload.error ?? "L'inscription exposant a echoué.");
         return;
       }
       setForm(initialState);
-      setMessage("Inscription exposant enregistree avec succes.");
+      setMessage("Merci ! Votre inscription au concours a bien été reçue. Préparez-vous sereinement, notre équipe vous contactera très bientôt pour la suite.");
     } catch {
       setError("Impossible d'envoyer le formulaire exposant.");
     } finally {
@@ -143,7 +143,7 @@ export default function ExhibitorRegistrationForm() {
       {error && <p className="text-sm text-red-600">{error}</p>}
 
       <Button type="submit" className="w-full sm:w-auto" disabled={submitting}>
-        {submitting ? "Envoi en cours..." : "Valider l'inscription exposant"}
+        {submitting ? "Envoi en cours..." : "Soumettre"}
       </Button>
     </form>
   );
