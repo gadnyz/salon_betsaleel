@@ -34,10 +34,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
-    {
-      question: "Qu'est-ce que Talents & Talents?",
-      answer: "Talents & Talents est le concept du salon entrepreneurial Betsaleel: une activité qui met en valeur les talents et initiatives entrepreneuriales des chrétiens.",
-    },
+ 
     {
       question: "Qui organise l'événement?",
       answer: "L'événement est organisé par les jeunes de l'église PPUNILU.",

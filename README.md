@@ -149,8 +149,3 @@ Checklist rapide en cas d'erreur:
 - `configured: false` sur `/api/inscriptions` => `GOOGLE_SHEET_ID` manquant
 - `500` a la soumission => variable(s) Google absente(s) ou invalide(s)
 - `502` Google => verifier droits APIs, partage du Sheet/Drive, et cle privee
-
-## Notes
-
-- Le README precedent du template Headshot AI a ete remplace pour correspondre au projet Salon Betsaleel.
-- Si besoin, on peut ajouter une section exploitation (sauvegarde Sheets, supervision logs, rotation des cles).

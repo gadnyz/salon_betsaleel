@@ -10,7 +10,7 @@ import type { Metadata, Viewport } from "next";
 
 const siteName = "Salon Betsaleel";
 const siteDescription =
-  "Premiere edition 2026 du salon entrepreneurial Talents & Talents organise par les jeunes de l'eglise PPUNILU.";
+  "Premiere edition 2026 du salon entrepreneurial  organise par la jeunesse de l'eglise PPUNILU.";
 const deploymentHost = process.env.DEPLOYMENT_URL?.replace(/^https?:\/\//, "");
 const siteUrl = deploymentHost ? `https://${deploymentHost}` : "https://salon-betsaleel.vercel.app";
 const ogImage = "/homepage/excursion%202026_719.jpg";
