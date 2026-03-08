@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 const schedule = [
   {
     title: "PANEL 1",
-    desc: "De l’idée à l’entreprise",
+    desc: "De l'idée au Business",
   },
   {
     title: "PAUSE & RESEAUTAGE",
@@ -13,7 +13,7 @@ const schedule = [
   },
   {
     title: "PANEL 2",
-    desc: "L’entrepreneuriat selon la pensée de Dieu",
+    desc: "Entreprendre à l'ère du digital",
   },
   {
     title: "TOUR DES STANDS & RESEAUTAGE",
