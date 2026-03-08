@@ -24,6 +24,10 @@ const schedule = [
     desc: "Présentation des projets sélectionnés devant le jury.",
   },
   {
+    title: "REMISE DES CERTIFICATS",
+    desc: "Remise officielle des certificats aux participants formés en entrepreneuriat, avec photo souvenir.",
+  },
+  {
     title: "REMISE DES PRIX ET CLOTURE",
     desc: "Annonce des gagnants et fin officielle de l'activité.",
   },

@@ -150,7 +150,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   const { spreadsheetId, exposantsSheet, concoursSheet } = getSheetConfig();
-  if (!spreadsheetId) return NextResponse.json({ error: "Base des données non accessible !! VEUILLEZ CONCTACTER L'ADMINISTRATEUR. Merci." }, { status: 500 });
+  if (!spreadsheetId) return NextResponse.json({ error: "La base de données est actuellement inaccessible. Veuillez contacter l’administrateur du système. Merci." }, { status: 500 });
 
   let body: { type?: RegistrationType; data?: RegistrationPayload };
   try {
