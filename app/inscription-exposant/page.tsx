@@ -17,7 +17,7 @@ export default function InscriptionExposantPage() {
         <div className="mt-6 rounded-2xl border bg-background p-6 md:p-8">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl">Inscription exposant</h1>
           <p className="mt-2 text-muted-foreground">
-            Remplissez ce formulaire pour enregistrer votre projet comme exposant.
+            Remplissez ce formulaire pour vous enregistrer comme exposant.
           </p>
           <ExhibitorRegistrationForm />
         </div>

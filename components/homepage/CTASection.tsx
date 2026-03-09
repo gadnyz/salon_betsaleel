@@ -8,7 +8,7 @@ export default function CTASection() {
         <div className="flex flex-col items-center justify-center gap-4 text-center md:gap-8">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Prêts pour le Salon Betsaleel 2026?</h2>
           <p className="max-w-[700px] text-lg text-gray-300">
-            Rejoignez la première édition de Talents & Talents et contribuez à la valorisation des talents entrepreneuriaux chrétiens.
+            Rejoignez la première édition de Salon Betsaleel et contribuez à la valorisation des talents entrepreneuriaux chrétiens.
           </p>
           <Link href="#contact" className="mt-4">
             <Button size="lg" className="bg-primary text-white hover:bg-primary/90">Contacter l'organisation</Button>
