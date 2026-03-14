@@ -4,11 +4,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 const benefits = [
-  "Visibilite du projet devant le public et les partenaires",
-  "Rencontres utiles et reseautage avec d'autres entrepreneurs",
-  "Opportunites de partenariat et de collaboration",
-  "Partage d'experience entre porteurs de projets",
-  "Mise en valeur des talents chretiens",
+  "Visibilité du projet devant le public et les partenaires",
+  "Rencontres utiles et réseautage avec d'autres entrepreneurs",
+  "Opportunités de partenariat et de collaboration",
+  "Partage d'expérience entre porteurs de projets",
+  "Mise en valeur des talents chrétiens",
 ];
 
 export default function ExamplesSection() {
@@ -17,9 +17,9 @@ export default function ExamplesSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center gap-4 text-center md:gap-8">
           <Badge variant="outline" className="mb-2">Exposition</Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Pourquoi exposer?</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Pourquoi exposer ?</h2>
           <p className="max-w-[700px] text-lg text-muted-foreground">
-            L'exposition est un espace de valorisation concrete des initiatives entrepreneuriales chretiennes.
+            L'exposition est un espace de valorisation concrète des initiatives entrepreneuriales chrétiennes.
           </p>
         </div>
 

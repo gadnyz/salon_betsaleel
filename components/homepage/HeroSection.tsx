@@ -9,9 +9,9 @@ export default function HeroSection() {
     <section id="accueil" className="relative overflow-hidden py-16 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="mx-auto mb-8 max-w-3xl text-center">
-          <Badge className="mb-4" variant="outline">Premiere edition 2026</Badge>
+          <Badge className="mb-4" variant="outline">Première édition 2026</Badge>
           <h1 className="mb-6 text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-            Salon Betsaleel: activité entrepreneuriale pour <span className="text-primary">valoriser les talents chrétiens</span>
+            Salon Betsaleel : activité entrepreneuriale pour <span className="text-primary">valoriser les talents chrétiens</span>
           </h1>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/inscription-exposant" className="w-full sm:w-auto">
