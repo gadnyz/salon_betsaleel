@@ -44,7 +44,7 @@ export default function ProcessSection() {
             Une après-midi structurée pour apprendre, exposer, réseauter et célébrer les talents entrepreneuriaux chrétiens.
           </p>
         </div>
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
+        {/* <div className="mt-16 grid gap-6 md:grid-cols-2">
           {schedule.map((item, index) => (
             <div key={item.title} className="rounded-2xl border bg-card p-6 shadow-sm">
               <p className="mb-2 text-sm font-semibold text-primary">Étape {index + 1}</p>
@@ -52,7 +52,7 @@ export default function ProcessSection() {
               <p className="text-sm text-muted-foreground">{item.desc}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
