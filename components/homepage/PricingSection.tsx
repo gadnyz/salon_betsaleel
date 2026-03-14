@@ -66,9 +66,9 @@ export default function PricingSection() {
               ))}
             </div>
 
-            <p className="mt-6 rounded-md border bg-muted/40 px-4 py-3 text-sm text-muted-foreground">
+            {/* <p className="mt-6 rounded-md border bg-muted/40 px-4 py-3 text-sm text-muted-foreground">
               Inscriptions concours bientôt disponibles.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

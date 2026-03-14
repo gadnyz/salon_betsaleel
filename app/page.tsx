@@ -1,7 +1,8 @@
-﻿import HeroSection from "@/components/homepage/HeroSection";
+import HeroSection from "@/components/homepage/HeroSection";
 import ProcessSection from "@/components/homepage/ProcessSection";
 import ExamplesSection from "@/components/homepage/ExamplesSection";
 import PricingSection from "@/components/homepage/PricingSection";
+import ClosingVideoSection from "@/components/homepage/ClosingVideoSection";
 
 export default function Index() {
   return (
@@ -11,6 +12,7 @@ export default function Index() {
         <ProcessSection />
         <ExamplesSection />
         <PricingSection />
+        <ClosingVideoSection />
       </div>
     </div>
   );
