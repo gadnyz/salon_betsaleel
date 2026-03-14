@@ -16,10 +16,10 @@ export default function HeroSection() {
         <div className="absolute inset-0 z-10 flex items-center justify-center px-4 py-10 md:px-10">
           <div className="mx-auto max-w-3xl text-center text-white">
             <Badge className="mb-4 border-white/25 bg-white/10 text-white" variant="outline">
-              Premiere edition 2026
+              Première édition 2026
             </Badge>
             <h1 className="mb-6 text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-              Salon Betsaleel : activite entrepreneuriale pour <span className="text-white">valoriser les talents chretiens</span>
+              Salon Betsaleel : activité entrepreneuriale pour <span className="text-white">valoriser les talents chrétiens</span>
             </h1>
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
               <Link href="/inscription-exposant" className="w-full sm:w-auto">
