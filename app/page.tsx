@@ -11,7 +11,7 @@ export default function Index() {
         <HeroSection />
         <ProcessSection />
         <ExamplesSection />
-        <PricingSection />
+        {/* <PricingSection /> */}
         <ClosingVideoSection />
       </div>
     </div>
