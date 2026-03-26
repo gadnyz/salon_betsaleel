@@ -8,7 +8,7 @@ import { ThemeToggle } from "./homepage/theme-toggle";
 const navLinks = [
   { href: "#accueil", label: "Accueil" },
   { href: "#programme", label: "Programme" },
-  { href: "#exposition", label: "Exposition" },
+  { href: "#exposition", label: "Réseautage et Exposition" },
   // { href: "#concours", label: "Concours" },
 ];
 

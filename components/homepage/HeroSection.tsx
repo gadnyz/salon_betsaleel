@@ -21,14 +21,14 @@ export default function HeroSection() {
             <h1 className="mb-6 text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
               Salon Betsaleel : activité entrepreneuriale pour <span className="text-white">valoriser les talents chrétiens</span>
             </h1>
-            <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+            {/* <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
               <Link href="/inscription-exposant" className="w-full sm:w-auto">
                 <Button size="lg" className="group w-full sm:w-auto">
                   S'inscrire pour exposer
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
-            </div>
+            </div> */}
 
             <RegistrationCounters />
           </div>

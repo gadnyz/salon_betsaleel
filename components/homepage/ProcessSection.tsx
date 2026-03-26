@@ -4,33 +4,21 @@ import { Badge } from "@/components/ui/badge";
 
 const schedule = [
   {
-    title: "PANEL 1",
-    desc: "De l'idée au Business",
-  },
-  {
-    title: "PAUSE & RESEAUTAGE",
-    desc: "Temps d'échanges entre participants, exposants et partenaires",
-  },
-  {
-    title: "PANEL 2",
-    desc: "Entreprendre à l'ère du digital",
-  },
-  {
-    title: "TOUR DES STANDS & RESEAUTAGE",
-    desc: "Visite des espaces d'exposition et rencontres directes avec les porteurs de projets.",
-  },
-  {
-    title: "CONCOURS DE PROJETS",
-    desc: "Présentation des projets sélectionnés devant le jury.",
-  },
-  {
     title: "REMISE DES CERTIFICATS",
     desc: "Remise officielle des certificats aux participants formés en entrepreneuriat, avec photo souvenir.",
   },
   {
-    title: "REMISE DES PRIX ET CLOTURE",
-    desc: "Annonce des gagnants et fin officielle de l'activité.",
+    title: "PANEL 1 : DE L'IDEE AU BUSINESS",
+    desc: "Comment Transformer une idée en entreprise réelle ?",
   },
+  {
+    title: "PANEL 2 : FINANCER SON PROJET",
+    desc: "Comment avoir accès aux crédits, Investissements et Opportunités pour les jeunes ?",
+  },
+  {
+    title: "TOUR DES STANDS & RESEAUTAGE",
+    desc: "Visite des espaces d'exposition et rencontres directes avec les porteurs de projets.",
+  }
 ];
 
 export default function ProcessSection() {
@@ -44,7 +32,7 @@ export default function ProcessSection() {
             Une après-midi structurée pour apprendre, exposer, réseauter et célébrer les talents entrepreneuriaux chrétiens.
           </p>
         </div>
-        {/* <div className="mt-16 grid gap-6 md:grid-cols-2">
+        <div className="mt-16 grid gap-6 md:grid-cols-2">
           {schedule.map((item, index) => (
             <div key={item.title} className="rounded-2xl border bg-card p-6 shadow-sm">
               <p className="mb-2 text-sm font-semibold text-primary">Étape {index + 1}</p>
@@ -52,7 +40,7 @@ export default function ProcessSection() {
               <p className="text-sm text-muted-foreground">{item.desc}</p>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </section>
   );

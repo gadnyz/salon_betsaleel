@@ -47,7 +47,7 @@ export default function RegistrationCounters() {
      
       <p className="mt-2 text-lg text-white/90 md:text-xl">
         <span className="font-semibold text-white">{stats ? stats.exposants : "..."}</span>{" "}
-        exposants ont déjà reservé leur place.
+        Exposants 
       </p>
     </div>
   );
