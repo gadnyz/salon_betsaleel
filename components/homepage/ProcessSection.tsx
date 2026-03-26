@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 const schedule = [
   {
     title: "REMISE DES CERTIFICATS",
-    desc: "Remise officielle des certificats aux participants formés en entrepreneuriat, avec photo souvenir.",
+    desc: "Remise officielle des certificats aux participants formés en entrepreneuriat.",
   },
   {
     title: "PANEL 1 : DE L'IDEE AU BUSINESS",

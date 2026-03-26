@@ -5,7 +5,7 @@ export default function ClosingVideoSection() {
     <section className="border-t bg-muted/20 py-16 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <Badge variant="outline" className="mb-3">Un message pour porter l'activité</Badge>
+          {/* <Badge variant="outline" className="mb-3">Un message pour porter l'activité</Badge> */}
           {/* <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Un message pour porter l'activité
           </h2> */}
